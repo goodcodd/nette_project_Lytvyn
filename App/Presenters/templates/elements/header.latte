@@ -1,0 +1,16 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/contacts">Contact</a></li>
+            <li><a href="/parliament">Parliament</a></li>
+            {if $user->isLoggedIn()}
+                <li><a n:href="Sign:out">Logout</a></li>
+            {else}
+                <li><a n:href="Sign:in">Login</a></li>
+            {/if}
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,31 @@
+{block content}
+	<a n:href="News:create">Додати новину</a>
+
+	<div>
+		<h1>{$message}</h1>
+	</div>
+
+	<table>
+		<tr>
+			<th>id</th>
+			<th>login</th>
+			<th>email</th>
+			<th>created_at</th>
+		</tr>
+		{foreach $users as $person}
+		<tr>
+			<td>{$person->user_id}</td>
+			<td>{$person->login}</td>
+			<td>{$person->email}</td>
+			<td>{$person->created_at|date:'j.m.Y'}</td>
+		</tr>
+		{/foreach}
+	</table>
+
+{/block}
+
+
+
+
+
+

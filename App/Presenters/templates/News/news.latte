@@ -1,0 +1,35 @@
+{block content}
+    <div>
+        <h1>{$message}</h1>
+    </div>
+    {if isset($user) && $user->isLoggedIn()}
+        <p>
+            Ви увійшли як {$login}
+        </p>
+        <p>
+            Ваш email: {$email}
+        </p>
+        <p>
+            Ваш id: {$user_id}
+        </p>
+    {/if}
+    {control newsForm}
+    <table>
+        <tr>
+            <th>Назва</th>
+            <th>Текст</th>
+            <th>Автор</th>
+            <th>Дата</th>
+            <th>ID</th>
+        </tr>
+        {foreach $news as $article}
+            <tr>
+                <td>{$article->news_title}</td>
+                <td>{$article->news_content}</td>
+                <td>{$article->news_user_login}</td>
+                <td>{$article->news_date_created|date:"d.m.Y H:i"}</td>
+                <td>{$article->news_id}</td>
+            </tr>
+        {/foreach}
+    </table>
+{/block}

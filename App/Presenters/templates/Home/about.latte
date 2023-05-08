@@ -1,0 +1,14 @@
+{block content}
+    <div>
+        <h1>{$message}</h1>
+    </div>
+{*    <form method="post" action="{link 'about'}" enctype="multipart/form-data">*}
+{*        <div class="form-group">*}
+{*            <label for="file">Выберите файл:</label>*}
+{*            <input type="file" id="file" name="file">*}
+{*        </div>*}
+{*        <button type="submit" class="btn btn-primary">Загрузить</button>*}
+{*    </form>*}
+    {control uploadForm}
+
+{/block}
